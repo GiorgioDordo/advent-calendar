@@ -4,8 +4,7 @@ console.log(source);
 
 const calendar = document.getElementById("calendar");
 const modal = document.getElementById("myModal");
-const modalContent = document.getElementsByClassName("modal-content");
-const span = document.querySelector(".close");
+const calendarDay = document.getElementsByClassName("calendar-day");
 
 const createCell = (content = "") => {
     const cell = document.createElement("div");
@@ -29,7 +28,15 @@ const createContent = (content = "") => {
     return modalContent;
 }
 
+const createCloseBtn = (content = "") => {
+    const span = document.createElement("div");
+    span.classList.add("close");
+    span.append(content);
+    return span;
+}
+
 for (let i = 1; i <= source.length; i++) {
+
     const cell = createCell();
     calendar.appendChild(cell);
 
@@ -39,25 +46,25 @@ for (let i = 1; i <= source.length; i++) {
     const modalContent = createContent();
     modal.appendChild(modalContent);
 
-    // cell.addEventListener('click', () => {
-    //     modal.style.display = "block";
-    //     console.log("open modal", i);
-    // })
+    const span = createCloseBtn();
+    modal.appendChild(span);
 
-    cell.onclick = function () {
+    cell.addEventListener('click', () => {
         modal.style.display = "block";
-    }
+        console.log("open", i);
+    });
 
-
-    span.onclick = function () {
+    span.addEventListener('click', () => {
         modal.style.display = "none";
-        console.log("close modal");
-    }
+        console.log("close", i);
+    });
 
     cell.innerHTML = `<img src="images/icons/${source[i - 1].icon}.png" />` + `<p>${i}<p>`;
 
+    span.innerHTML = "&times;";
+
     if (source[i - 1].type === "image") {
-        modalContent.innerHTML = `<img src="${source[i - 1].url}" />` + `<span id="close-modal" class="close">&times;</span>`;
+        modalContent.innerHTML = `<img src="${source[i - 1].url}" />`;
     } else {
         modalContent.innerHTML = `<p>${source[i - 1].text}</p>`;
     }

@@ -57,7 +57,7 @@ img {
 }
 
 /* The Close Button */
-.close-modal {
+.close {
     color: #aaaaaa;
     position: absolute;
     top: 0px;
@@ -65,8 +65,8 @@ img {
     font-weight: bold;
 }
 
-.lose-modal:hover,
-.close-modal:focus {
+.close:hover,
+.close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
