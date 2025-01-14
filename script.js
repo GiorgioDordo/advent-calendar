@@ -50,7 +50,7 @@ for (let i = 1; i <= source.length; i++) {
     cell.addEventListener('click', () => {
         // lo stile della modale diventa flex
         modal.style.display = "flex";
-        console.log("open");
+        console.log("open", i);
     });
 
     // creo la modale e la aggiungo come figlia al calendario
