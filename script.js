@@ -23,7 +23,9 @@ for (let i = 1; i <= source.length; i++) {
     // aggiungo il contenuto ad ogni singola cella facendo un ciclo sull'array source
     cell.innerHTML = `<img class="icons" src="images/icons/${source[i - 1].icon}.png" />` + `<p class="calendar-number">${i}</p>`;
 
-    if (cellClicked.includes(i)) cell.classList.add("calendar-day-clicked");
+    if (cellClicked.includes(i)) {
+        cell.classList.add("calendar-day-clicked");
+    }
 
     // creo un evento, quando si clicca sulla cella si apre la modale
     cell.addEventListener('click', () => {

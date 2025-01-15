@@ -18,6 +18,7 @@ body {
     background-image: url(images/header-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 0 0 20px 20px;
 }
 
 .header-container {
@@ -45,6 +46,10 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+
+.calendar-day:nth-last-child(2):not(.calendar-day-clicked) {
+    background-color: grey;
 }
 
 .calendar-day-clicked {
