@@ -27,10 +27,6 @@ for (let i = 1; i <= source.length; i++) {
         cell.classList.add("calendar-day-clicked");
     }
 
-    // creo la modale e la aggiungo come figlia al calendario
-    const modal = createModal();
-    calendar.appendChild(modal);
-
     // creo un evento, quando si clicca sulla cella si apre la modale
     cell.addEventListener('click', () => {
         // lo stile della modale diventa flex
@@ -41,6 +37,10 @@ for (let i = 1; i <= source.length; i++) {
         cell.classList.add("calendar-day-clicked");
         console.log("open", i);
     });
+
+    // creo la modale e la aggiungo come figlia al calendario
+    const modal = createModal();
+    calendar.appendChild(modal);
 
     // creo il contenuto della modale e lo aggiungo come figla alla maodale
     const modalContent = createContent();
