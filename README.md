@@ -9,4 +9,4 @@ All’interno della modale verrà mostrata una frase o un’immagine, fornite da
 ![alt text](<./presentation/screenshot2.png>)
 
 Le caselle una volta cliccate cambieranno stile, risultando come già aperte.
-![alt text](<./presentation/gif3.png>)
+![alt text](<./presentation/gif3.gif>)
