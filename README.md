@@ -1,2 +1,2 @@
 CALENDARIO DELL'AVVENTO
-![alt text](</presentation/screenshot1.png>)
+![alt text](<./presentation/screenshoot1.png>)
