@@ -1,6 +1,7 @@
 # CALENDARIO DELL'AVVENTO
 ### Il progetto è stato sviluppato con:
 HTML CSS JS
+![alt text](<./presentation/w3_html5-icon.svg>)
 ![alt text](<./presentation/screenshot1.png>)
 
 ## FUNZIONALITÀ 
